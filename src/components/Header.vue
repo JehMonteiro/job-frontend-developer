@@ -21,8 +21,8 @@
    <nav class="link">
         <router-link to="/"><li>Eletrônicos</li></router-link>
         <router-link to="/"><li>Acessórios</li></router-link>
-        <router-link to="/"><li>Homens</li></router-link>
-        <router-link to="/"><li>Mulheres</li></router-link>
+        <router-link to="/"><li>Masculino</li></router-link>
+        <router-link to="/"><li>Feminino</li></router-link>
     </nav>
 </template>
 

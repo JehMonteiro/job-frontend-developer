@@ -1,6 +1,6 @@
 <template>
     <div id="main-container">
-        <img src="img/banner-secundario.png" alt="alt" id="banner">
+        <img src="img/banner-oferta.webp" alt="alt" id="banner">
     </div>
 </template>
 
