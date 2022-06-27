@@ -1,24 +1,33 @@
 <template>
   <div id="app">
-   <swiper
-    :slidesPerView="1"
-    :spaceBetween="30"
-    :loop="true"
-    :pagination="{
-      clickable: true,
-    }"
-    :navigation="true"
-    :modules="modules"
-    class="mySwiper"
-  >
-      <swiper-slide><img src="img/banner-01.webp" alt="alt" id="banner"></swiper-slide>
-      <swiper-slide><img src="img/banner-05.webp" alt="alt" id="banner"></swiper-slide
-      ><swiper-slide><img src="img/banner-03.webp" alt="alt" id="banner"></swiper-slide>
-      <swiper-slide><img src="img/banner-04.webp" alt="alt" id="banner"></swiper-slide>
-      <swiper-slide><img src="img/banner-06.webp" alt="alt" id="banner"></swiper-slide>
-     
+    <swiper
+      :slidesPerView="1"
+      :spaceBetween="30"
+      :loop="true"
+      :pagination="{
+        clickable: true,
+      }"
+      :navigation="true"
+      :modules="modules"
+      class="mySwiper"
+    >
+      <swiper-slide
+        ><img src="img/banner-01.webp" alt="alt" id="banner"
+      /></swiper-slide>
+      <swiper-slide
+        ><img src="img/banner-05.webp" alt="alt" id="banner" 
+      /></swiper-slide
+      ><swiper-slide
+        ><img src="img/banner-03.webp" alt="alt" id="banner"
+      /></swiper-slide>
+      <swiper-slide
+        ><img src="img/banner-04.webp" alt="alt" id="banner"
+      /></swiper-slide>
+      <swiper-slide
+        ><img src="img/banner-06.webp" alt="alt" id="banner"
+      /></swiper-slide>
     </swiper>
- </div>
+  </div>
 </template>
 
 <script>
@@ -48,7 +57,9 @@ export default {
 </script>
 
 <style scoped>
-#app { height: 100% }
+#app {
+  height: 100%;
+}
 html,
 body {
   position: relative;
@@ -100,6 +111,4 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
-
 </style>

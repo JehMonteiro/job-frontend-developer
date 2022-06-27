@@ -2,15 +2,15 @@
   <div class="pagamento">
     <div>
       <h5>Cartão de crédito em até 12x</h5>
-      <a href="#"><img src="img/pagamento.png" alt="Payment-card"/></a>
+      <a href="#"><img src="img/pagamento.png" alt="Payment-card" /></a>
     </div>
     <div>
-        <h5>PIX e transferência bancária</h5>
-        <img src="img/pagamento-a-vista.png" alt="Caminhão de entrega"/>
+      <h5>PIX e transferência bancária</h5>
+      <img src="img/pagamento-a-vista.png" alt="Caminhão de entrega" />
     </div>
     <div>
-        <h5>Entrega em todo o Brasil</h5>
-        <img src="img/entrega.png" alt="Caminhão de entrega"/>
+      <h5>Entrega em todo o Brasil</h5>
+      <img src="img/entrega.png" alt="Caminhão de entrega" />
     </div>
   </div>
 </template>
