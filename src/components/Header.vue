@@ -37,6 +37,8 @@ export default {
 </script>
 
 <style scoped>
+
+/* Header */
 #nav {
   background-color: #f3f4f6;
   display: flex;
@@ -62,25 +64,35 @@ export default {
   border: 2px solid #773cbc;
 }
 
+/* Links de navegação */
 .link {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #f3f4f6;
+  background-color: #ff1a73;
   border-bottom: 1px solid #783cbc3b;
+  padding: 10px 10px;
 }
 
 .link li {
   list-style: none;
   font-size: 18px;
-  color: #773cbc;
+  color: #fff;
+  font-weight: 700;
 }
 
 .link li:hover {
-  color: #ff1a73;
   transition-duration: 0.3s;
+  transform: scale(1.1);
+  background-position: -100px;
 }
 
+.link li:active {
+    transform: scale(1);
+    background-position: 800px;
+}
+
+/* Carrinho de compra */
 #nav .carrinho {
   display: block;
   align-items: center;
@@ -97,7 +109,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
 }
-.carrinho p {
+#nav .carrinho p {
   text-align: center;
   color: #4b4848;
   padding-top: 10px;
