@@ -1,76 +1,105 @@
 <template>
-<div id="main-container">
-        <img src="img/banner-principal.png" alt="alt" id="banner">
-    </div>
-  <div class="heroBlock">
-      <v-carousel>
-        <v-carousel-item
-          v-for="(item,i) in items"
-          :key="i"
-          :src="item.src"
-          reverse-transition="fade-transition"
-          transition="fade-transition"
-        ></v-carousel-item>
-      </v-carousel>
-  </div>
+  <div id="app">
+   <swiper
+    :slidesPerView="1"
+    :spaceBetween="30"
+    :loop="true"
+    :pagination="{
+      clickable: true,
+    }"
+    :navigation="true"
+    :modules="modules"
+    class="mySwiper"
+  >
+      <swiper-slide><img src="img/banner-01.webp" alt="alt" id="banner"></swiper-slide>
+      <swiper-slide><img src="img/banner-05.webp" alt="alt" id="banner"></swiper-slide
+      ><swiper-slide><img src="img/banner-03.webp" alt="alt" id="banner"></swiper-slide>
+      <swiper-slide><img src="img/banner-04.webp" alt="alt" id="banner"></swiper-slide>
+      <swiper-slide><img src="img/banner-06.webp" alt="alt" id="banner"></swiper-slide>
+     
+    </swiper>
+ </div>
 </template>
 
 <script>
-export default {
-    name: 'Hero',
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
 
-    data () {
-      return {
-        items: [
-          {
-            src: require("../assets/banner-principal.png"),
-          },
-          {
-            src: require("../assets/banner-secundario.png"),
-          },
-          {
-            src: require("../assets/banner-principal.png"),
-          },
-          {
-            src: require("../assets/banner-secundario.png"),
-          },
-        ],
-      }
-    },
-}
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Pagination, Navigation } from "swiper";
+
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Pagination, Navigation],
+    };
+  },
+};
 </script>
 
-<style>
-    #main-container img{
-        width: 100%;
-        height: 65vh;
-    }
-    .heroBlock {
-        position: relative;
-    }
-    
-    @media only screen and (max-width: 599px){
-        .v-window{
-        height: 220px !important;
-        }
-    }
+<style scoped>
+#app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
 
-    .v-image__image .v-image__image::before{
-       content: '';
-       background: rgba(0, 0, 0, 0.3);
-       position: absolute;
-       top: 0;
-       bottom: 0;
-       left: 0;
-       right: 0;
-       z-index: 1;
-    }
-    
-    .tittle {
-        color: white;
-        position: relative;
-        z-index: 2;
-    }
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
 
-    
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 </style>
