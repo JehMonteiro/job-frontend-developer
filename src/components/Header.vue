@@ -6,6 +6,7 @@
 
     <div class="input-pesquisa">
       <input type="text" placeholder="O que está procurando?" />
+      <img src="img/lupaa.png" alt="Lupa de pesquisa" />
     </div>
 
     <div class="carrinho">
@@ -20,10 +21,10 @@
   </header>
 
   <nav class="link">
-    <router-link to="/"><li>Eletrônicos</li></router-link>
-    <router-link to="/"><li>Acessórios</li></router-link>
-    <router-link to="/"><li>Masculino</li></router-link>
-    <router-link to="/"><li>Feminino</li></router-link>
+    <router-link to="/Eletronicos.vue"><li>Eletrônicos</li></router-link>
+    <router-link to="/Acessorios.vue"><li>Acessórios</li></router-link>
+    <router-link to="/Masculino.vue"><li>Masculino</li></router-link>
+    <router-link to="/Feminino.vue"><li>Feminino</li></router-link>
   </nav>
 </template>
 
@@ -53,6 +54,8 @@ export default {
   height: 130px;
   width: 200px;
 }
+
+/* Input pesquisa */
 #nav input {
   padding: 10px 200px;
   margin: 10px 150px;
@@ -62,6 +65,13 @@ export default {
 }
 #nav input:hover {
   border: 2px solid #773cbc;
+}
+
+#nav .input-pesquisa img{
+  width: 60px;
+  height: 70px;
+  margin-left: -140px;
+ 
 }
 
 /* Links de navegação */
@@ -114,6 +124,8 @@ export default {
   color: #4b4848;
   padding-top: 10px;
 }
+
+
 </style>
 
 

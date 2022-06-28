@@ -63,9 +63,13 @@ body {
   background-color: var(--color-background);
 }
 
-a {
+a,
+ul,
+li {
   text-decoration: none;
+  list-style: none;
   transition: 0.2 opacity;
+  
 }
 
 a:hover {

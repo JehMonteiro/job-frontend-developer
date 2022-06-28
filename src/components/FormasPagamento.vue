@@ -2,7 +2,7 @@
   <div class="pagamento">
     <div>
       <h5>Cartão de crédito em até 12x</h5>
-      <a href="#"><img src="img/pagamento.png" alt="Payment-card" /></a>
+      <img src="img/pagamento.png" alt="Payment-card" />
     </div>
     <div>
       <h5>PIX e transferência bancária</h5>
@@ -27,8 +27,6 @@
   color: #fff;
   font-size: 2.5vh;
   text-align: center;
-  margin-top: 50px;
-  padding-top: 25px;
   line-height: 70px;
   text-shadow: 2px 3px rgba(0, 0, 0, 0.507);
 }
