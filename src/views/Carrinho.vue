@@ -1,5 +1,17 @@
 <template>
-  <div>
-    <h1>Carrinho</h1>
-  </div>
+  <Carrinho />
 </template>
+
+<script>
+import Carrinho from "../components/Carrinho.vue";
+
+export default {
+  name: "Carrinho",
+  components: {
+    Carrinho,
+  },
+};
+</script>
+
+<style>
+</style>
