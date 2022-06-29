@@ -38,6 +38,13 @@
     </div>
   </footer>
   <a id="link-topo" href="#"><img src="img/arrow.png"></a>
+  <buttom class="btn-whatsapp">
+      <a
+        href="https://web.whatsapp.com/send?phone=55119999999"
+        target="_black"
+        ><img src="img/whatsapp.png" />
+      </a>
+    </buttom>
 </template>
 
 <script>
@@ -124,6 +131,14 @@ export default {
   padding: 15px;
   right: 15px;
   bottom: 20px;
+  position: fixed;
+  z-index: 99999;
+}
+/* Botão whatsapp */
+.btn-whatsapp a{
+  padding: 15px;
+  left: 15px;
+  bottom: 12px;
   position: fixed;
   z-index: 99999;
 }
