@@ -22,11 +22,12 @@
 .pagamento {
   display: flex;
   justify-content: space-around;
-  background-color: var(--color-primary);
-  height: 20vh;
+  background-color: #352B73;
+  height: 30vh;
   color: #fff;
   font-size: 2.5vh;
   text-align: center;
+  align-items: center;
   line-height: 70px;
   text-shadow: 2px 3px rgba(0, 0, 0, 0.507);
 }

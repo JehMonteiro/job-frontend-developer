@@ -5,7 +5,7 @@
       <ul>
         <li v-for="product in array_products" :key="product.id">
           <img :src="product.image" alt="" />
-          {{ product.title }} <br>
+          {{ product.title }} <br><br>
           {{ product.price }}
         </li>
       </ul>
