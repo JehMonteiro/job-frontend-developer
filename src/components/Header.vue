@@ -21,10 +21,10 @@
   </header>
 
   <nav class="link">
-    <router-link to="/Eletronicos"><li>Eletrônicos</li></router-link>
-    <router-link to="/Acessorios"><li>Acessórios</li></router-link>
-    <router-link to="/Masculino"><li>Masculino</li></router-link>
-    <router-link to="/Feminino"><li>Feminino</li></router-link>
+    <router-link to="/eletronicos"><li>Eletrônicos</li></router-link>
+    <router-link to="/acessorios"><li>Acessórios</li></router-link>
+    <router-link to="/masculino"><li>Masculino</li></router-link>
+    <router-link to="/feminino"><li>Feminino</li></router-link>
   </nav>
 </template>
 
@@ -38,7 +38,6 @@ export default {
 </script>
 
 <style scoped>
-
 /* Header */
 #nav {
   background-color: #f3f4f6;
@@ -67,11 +66,10 @@ export default {
   border: 2px solid #773cbc;
 }
 
-#nav .input-pesquisa img{
+#nav .input-pesquisa img {
   width: 60px;
   height: 70px;
   margin-left: -140px;
- 
 }
 
 /* Links de navegação */
@@ -98,8 +96,8 @@ export default {
 }
 
 .link li:active {
-    transform: scale(1);
-    background-position: 800px;
+  transform: scale(1);
+  background-position: 800px;
 }
 
 /* Carrinho de compra */
@@ -124,8 +122,6 @@ export default {
   color: #4b4848;
   padding-top: 10px;
 }
-
-
 </style>
 
 

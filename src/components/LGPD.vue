@@ -7,7 +7,7 @@
       <a href="public/politica.pdf" target="_blank">política de privacidade</a>.
     </p>
 
-    <button class="lgpd-consent-popup-button" onclick="clickConsent()">
+    <button class="lgpd-consent-popup-button" onclick="handleclickconsent">
       CONCORDAR E FECHAR
     </button>
   </div>
@@ -16,9 +16,11 @@
 
 <script>
 // Função para aceitar as políticas de LGPD
-function clickConsent() {
+function handleclickconsent() {
+  console.log("chegou")
   let consent_lgpd = document.querySelector(".lgpd-consent-popup");
   localStorage.setItem("lgpd-consent", new Date());
+  console.log(consent_lgpd)
   consent_lgpd.style.display = "none";
 }
 
