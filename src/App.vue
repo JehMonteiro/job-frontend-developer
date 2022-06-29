@@ -1,25 +1,17 @@
 <template>
-  <router-view />
-  <router-link to="/">Home</router-link>
-  <router-link to="/">Sobre</router-link>
   <Header :logo="logo_src" :alt="app_name" />
-  <Hero />
-  <Produtos />
-  <Banner />
-  <Newsletter />
-  <FormasPagamento />
+  <router-view />
   <Footer :logo="logo_src" :alt="app_name" />
-  <LGPD />
 </template>
 
 <script>
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Produtos from "./components/Produtos";
-import Banner from "./components/Banner";
-import Newsletter from "./components/Newsletter";
-import FormasPagamento from "./components/FormasPagamento";
-import Footer from "./components/Footer";
+import Header from "./components/Header.vue";
+import Hero from "./components/Hero.vue";
+import Produtos from "./components/Produtos.vue";
+import Banner from "./components/Banner.vue";
+import Newsletter from "./components/Newsletter.vue";
+import FormasPagamento from "./components/FormasPagamento.vue";
+import Footer from "./components/Footer.vue";
 import LGPD from "./components/LGPD";
 
 export default {
