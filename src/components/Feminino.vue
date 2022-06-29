@@ -1,6 +1,6 @@
 <template>
   <section id="container">
-    <h1>ELETRÔNICOS</h1>
+    <h1>FEMININO</h1>
     <div class="shopping">
       <ul>
         <li v-for="product in array_products" :key="product.id">
@@ -17,7 +17,7 @@
 import axios from "axios";
 
 export default {
-  name: "Eletronicos",
+  name: "Feminino",
   data() {
     return {
       array_products: [],
@@ -26,7 +26,7 @@ export default {
   methods: {
     async loadProducts() {
       axios
-        .get("https://fakestoreapi.com/products/category/eletronics")
+        .get("https://fakestoreapi.com/products/category/womensclothing")
         .then((response) => {
           this.array_products = response.data;
           console.log(this.array_products);
