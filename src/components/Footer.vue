@@ -37,6 +37,7 @@
       </ul>
     </div>
   </footer>
+  <a id="link-topo" href="#"><img src="img/arrow.png"></a>
 </template>
 
 <script>
@@ -118,5 +119,12 @@ export default {
 .redes-sociais .sci li a img {
   filter: invert(1);
   transform: scale(0.5);
+}
+#link-topo img{
+  padding: 15px;
+  right: 15px;
+  bottom: 20px;
+  position: fixed;
+  z-index: 99999;
 }
 </style>
