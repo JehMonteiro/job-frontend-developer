@@ -122,6 +122,17 @@ export default {
   color: #4b4848;
   padding-top: 10px;
 }
+#nav .carrinho:hover {
+  transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    box-shadow 500ms linear;
+  transform: scale(1.1);
+  background-position: -100px;
+}
+#nav .carrinho:active {
+  transform: scale(1);
+  background-position: 800px;
+}
 </style>
 
 
