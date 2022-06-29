@@ -6,7 +6,7 @@
 
     <div class="input-pesquisa">
       <input type="text" placeholder="O que está procurando?" />
-      <img src="img/lupaa.png" alt="Lupa de pesquisa" />
+      <img src="img/lupa.png" alt="Lupa de pesquisa" />
     </div>
 
     <div class="carrinho">
@@ -21,10 +21,10 @@
   </header>
 
   <nav class="link">
-    <router-link to="/Eletronicos.vue"><li>Eletrônicos</li></router-link>
-    <router-link to="/Acessorios.vue"><li>Acessórios</li></router-link>
-    <router-link to="/Masculino.vue"><li>Masculino</li></router-link>
-    <router-link to="/Feminino.vue"><li>Feminino</li></router-link>
+    <router-link to="/Eletronicos"><li>Eletrônicos</li></router-link>
+    <router-link to="/Acessorios"><li>Acessórios</li></router-link>
+    <router-link to="/Masculino"><li>Masculino</li></router-link>
+    <router-link to="/Feminino"><li>Feminino</li></router-link>
   </nav>
 </template>
 
