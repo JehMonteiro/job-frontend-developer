@@ -44,53 +44,58 @@ export default {
 </script>
 
 
-<style scoped>
-
+<style lang="scss" scoped>
 #container {
   text-align: center;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   width: 80%;
   margin-left: 10%;
-  
-  
-}
-#container h1 {
-  color: #4b4848;
-  text-align: center;
-  padding: 30px;
-  font-size: 30px;
-}
-#container ul li {
-  border: 2px solid rgba(128, 128, 128, 0.349);
-  width: 300px;
-  height: 400px;
-  display: block;
-  gap: 1rem;
-  border-radius: 20px;
-  cursor: pointer;
-}
-#container ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-}
-#container li{
-  padding: 10px;
-  box-shadow: 2px 2px rgba(128, 128, 128, 0.363);
-}
-#container li img {
-  width: 110px;
-  padding-top: 20px;
-  display: block;
- 
-}
-#container img {
-  margin: auto;
-  padding-bottom: 20px;
-}
 
+  h1 {
+    color: var(--color-gray);
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  ul li {
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.096);
+    width: 300px;
+    height: 400px;
+    display: block;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  li img {
+    width: 110px;
+    padding-top: 20px;
+    display: block;
+  }
+  img {
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  ul li:hover {
+    transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55),
+      background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55),
+      box-shadow 500ms linear;
+  }
+  li:hover {
+    transform: scale(1.1);
+    background-position: -100px;
+  }
+  li:active {
+    transform: scale(1);
+    background-position: 800px;
+  }
+}
 </style>
