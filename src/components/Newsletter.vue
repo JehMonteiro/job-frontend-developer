@@ -27,18 +27,25 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .newsletter {
   display: flex;
   background-color: #f3f4f6;
   padding: 50px 90px;
   color: var(--color-secondary);
   justify-content: space-around;
+
+  img {
+  width: 35px;
+  margin: 8px;
 }
-.newsletter form {
+}
+
+form {
   display: flex;
 }
-.newsletter input {
+
+input {
   border: none;
   border-radius: 47px;
   padding: 12px 100px;
@@ -47,29 +54,23 @@ export default {
     background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55),
     box-shadow 500ms linear;
   border: 3px solid var(--color-secondary);
-}
-.newsletter input:hover {
+
+  &:hover {
   transform: scale(1.1);
   background-position: -100px;
 }
-.newsletter input:active {
+&:active {
   transform: scale(1);
   background-position: 800px;
 }
-.newsletter input::placeholder {
+&::placeholder {
   opacity: 0.5;
   padding-left: -20px;
   font-family: "Exo", sans-serif;
   font-size: 15px;
 }
-.newsletter hr {
-  color: #000;
-  height: 1.5px;
 }
-.newsletter img {
-  width: 35px;
-  margin: 8px;
-}
+
 
 @media screen and (max-width: 1199px) {
   .newsletter-form .input-default {

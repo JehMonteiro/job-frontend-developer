@@ -18,13 +18,13 @@
 <script>
 </script>
 
-<style>
+<style lang="scss" scoped>
 .pagamento {
   display: flex;
   justify-content: space-around;
-  background-color: #352B73;
+  background-color: var(--color-dark-purple);
   height: 30vh;
-  color: #fff;
+  color: var(--color-font-text);
   font-size: 2.5vh;
   text-align: center;
   align-items: center;

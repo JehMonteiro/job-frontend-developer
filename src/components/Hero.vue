@@ -15,8 +15,7 @@
         ><img src="img/banner-01.webp" alt="alt" id="banner"
       /></swiper-slide>
       <swiper-slide
-        ><img src="img/banner-05.webp" alt="alt" id="banner" 
-      /></swiper-slide
+        ><img src="img/banner-05.webp" alt="alt" id="banner" /></swiper-slide
       ><swiper-slide
         ><img src="img/banner-03.webp" alt="alt" id="banner"
       /></swiper-slide>
@@ -56,9 +55,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #app {
   height: 100%;
+  width: 100%;
 }
 html,
 body {
@@ -78,6 +78,8 @@ body {
 .swiper {
   width: 100%;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .swiper-slide {
@@ -98,17 +100,12 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
+  
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 </style>

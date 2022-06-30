@@ -34,9 +34,10 @@ export default {
 :root {
   --color-primary: #773cbc;
   --color-secondary: #ff1a73;
+  --color-dark-purple:#352B73;
   --color-background: #fff;
+  --color-font-text: #fff;
   --color-background-nav: #f3f4f6;
-  --color-background-home: #fff;
   --color-gray: #4b4848;
   --color-black: #000;
 }

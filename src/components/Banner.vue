@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #main-container {
   margin: 50px 100px;
   min-height: 250px;
@@ -19,13 +19,12 @@ export default {
   padding: 0;
   margin: 0;
   background-size: cover;
-}
 
-#main-container img {
+  img {
   position: relative;
   height: 65vh;
   width: 100vw;
-
   background-size: cover;
+}
 }
 </style>

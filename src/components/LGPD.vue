@@ -17,10 +17,10 @@
 <script>
 // Função para aceitar as políticas de LGPD
 function handleclickconsent() {
-  console.log("chegou")
+  console.log("chegou");
   let consent_lgpd = document.querySelector(".lgpd-consent-popup");
   localStorage.setItem("lgpd-consent", new Date());
-  console.log(consent_lgpd)
+  console.log(consent_lgpd);
   consent_lgpd.style.display = "none";
 }
 
@@ -36,20 +36,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
 });
 </script>
 
-<style>
-:root {
-  --primary-color: #ff1a73;
-  --secondary-color: #333;
-  --tertiary-color: #f7f3f3;
-  --fourth-color: #fff;
-}
 
+<style lang="scss" scoped>
 .lgpd-consent-popup {
   display: flex;
   align-items: center;
   position: fixed;
   z-index: 99;
-  background-color: var(--tertiary-color);
+  background-color: var(--color-background-nav);
   width: 100%;
   height: 90px;
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
@@ -66,27 +60,26 @@ document.addEventListener("DOMContentLoaded", function (e) {
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
-}
 
-.lgpd-consent-popup a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.lgpd-consent-popup p {
-  width: 65%;
-  font-weight: 400;
-  z-index: 100;
-  font-family: sans-serif !important;
-  font-size: 16px;
-  text-align: left;
+  a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  p {
+    width: 65%;
+    font-weight: 400;
+    z-index: 100;
+    font-family: sans-serif !important;
+    font-size: 16px;
+    text-align: left;
+  }
 }
 
 .lgpd-consent-popup-button {
   margin-left: 5px;
-  color: var(--fourth-color);
-  background-color: var(--primary-color);
+  color: var(--color-font-text);
+  background-color: var(--color-secondary);
   cursor: pointer;
   border: none;
   border-radius: 50px;
@@ -101,14 +94,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
   max-width: 300px;
   text-transform: uppercase;
   font-family: sans-serif !important;
-}
 
-.lgpd-consent-popup-button:hover {
-  background: var(--tertiary-colorr);
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  font-weight: bold !important;
-  transition: 0.4s;
+  &:hover {
+    background: var(--color-background-nav);
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+    font-weight: bold !important;
+    transition: 0.4s;
+  }
 }
 
 /*Celular*/
@@ -121,14 +114,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
     padding-right: 15px;
     font-size: 12px;
     flex-wrap: wrap;
-  }
 
-  .lgpd-consent-popup p {
-    width: 90%;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 16px 0 11px 0;
-    font-size: 12px;
+    p {
+      width: 90%;
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 16px 0 11px 0;
+      font-size: 12px;
+    }
   }
 
   .lgpd-consent-popup-button {
@@ -148,19 +141,19 @@ document.addEventListener("DOMContentLoaded", function (e) {
     padding-right: 15px;
     font-size: 15px;
     flex-wrap: wrap;
-  }
 
-  .lgpd-consent-popup p {
-    width: 100%;
-    font-weight: 400;
-    padding-left: 5px;
-    margin-top: 30px;
+    p {
+      width: 100%;
+      font-weight: 400;
+      padding-left: 5px;
+      margin-top: 30px;
+    }
   }
 
   .lgpd-consent-popup-button {
     font-size: 14px;
     padding: 14px 0 14px 0;
-    margin: -20px 20px 10px 216px;
+    margin: -20px auto 10px auto;
   }
 }
 
