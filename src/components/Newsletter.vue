@@ -30,7 +30,7 @@ export default {
 <style lang="scss" scoped>
 .newsletter {
   display: flex;
-  background-color: #f3f4f6;
+  background-color: var(--color-background-nav);
   padding: 50px 90px;
   color: var(--color-secondary);
   justify-content: space-around;

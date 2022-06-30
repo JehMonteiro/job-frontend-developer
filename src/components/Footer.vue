@@ -97,6 +97,8 @@ export default {
   p {
     color: var(--color-secondary);
     padding-bottom: 8px;
+    padding-bottom: 15px;
+    font-weight: 700;
   }
   a img {
     width: 170px;

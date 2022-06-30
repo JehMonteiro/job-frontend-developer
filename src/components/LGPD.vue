@@ -1,43 +1,55 @@
 <template>
-  <div class="lgpd-consent-popup">
-    <p>
-      Coletamos dados estatísticos de visitas para melhorar sua experiência de
-      navegação e personalizar conteúdo e anúncios. Ao continuar navegando você
-      concorda com a nossa
-      <a href="public/politica.pdf" target="_blank">política de privacidade</a>.
-    </p>
+  <div class="lgpd-consent-popup" v-show="!consented">
+    <div class="lgpd-consent-popup-body container">
+      <p>
+        Coletamos dados estatísticos de visitas para melhorar sua experiência de
+        navegação e personalizar conteúdo e anúncios. Ao continuar navegando
+        você concorda com a nossa
+        <a :href="href" target="_blank">política de privacidade</a>.
+      </p>
 
-    <button class="lgpd-consent-popup-button" onclick="handleclickconsent">
-      CONCORDAR E FECHAR
-    </button>
+      <button class="lgpd-consent-popup-button" @click="consent">
+        CONCORDAR E FECHAR
+      </button>
+    </div>
   </div>
 </template>
 
 
 <script>
-// Função para aceitar as políticas de LGPD
-function handleclickconsent() {
-  console.log("chegou");
-  let consent_lgpd = document.querySelector(".lgpd-consent-popup");
-  localStorage.setItem("lgpd-consent", new Date());
-  console.log(consent_lgpd);
-  consent_lgpd.style.display = "none";
-}
+export default {
+  name: "LGPD",
+  data: function () {
+    return {
+      consented: false,
+    };
+  },
 
-document.addEventListener("DOMContentLoaded", function (e) {
-  // Definindo variáveis
-  // O componente em HTML
-  let consent_lgpd = document.querySelector(".lgpd-consent-popup");
-  // O consente no local storage
-  let consent = localStorage.getItem("lgpd-consent");
+  props: ["href"],
 
-  // Verificando situação do consente
-  if (consent) consent_lgpd.style.display = "none";
-});
+  methods: {
+    consent: function () {
+      localStorage.setItem("lgpd-consent", new Date());
+      this.consented = true;
+    },
+  },
+
+  mounted: function () {
+    let consent = localStorage.getItem("lgpd-consent");
+    this.consented = consent ? true : false;
+  },
+};
 </script>
 
 
 <style lang="scss" scoped>
+
+.lgpd-consent-popup-body {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .lgpd-consent-popup {
   display: flex;
   align-items: center;
@@ -73,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
     font-family: sans-serif !important;
     font-size: 16px;
     text-align: left;
+    line-height: 1.5;
+    margin: auto;
   }
 }
 
@@ -94,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
   max-width: 300px;
   text-transform: uppercase;
   font-family: sans-serif !important;
+  
 
   &:hover {
     background: var(--color-background-nav);
@@ -109,31 +124,40 @@ document.addEventListener("DOMContentLoaded", function (e) {
   .lgpd-consent-popup {
     display: block;
     width: 100%;
-    height: 180px;
     padding-left: 15px;
     padding-right: 15px;
+    height: 170px;
+    padding-right: 30px;
+    max-width: 100%;
     font-size: 12px;
     flex-wrap: wrap;
 
     p {
-      width: 90%;
+      width: 100%;
       font-weight: 400;
       line-height: 1.5;
-      padding: 16px 0 11px 0;
+      padding-top: 16px;
       font-size: 12px;
     }
   }
 
   .lgpd-consent-popup-button {
     font-size: 10px;
-    width: 55% !important;
-    margin-left: 22%;
-    margin-top: 15px;
+    max-width: 65% !important;
+    height: 100%;
+    align-content: center;
+    align-items: center;
+    font-size: 11px!important;
+    margin-left: 20%!important;
+  }
+
+  .lgpd-consent-popup-body {
+    display: block;
   }
 }
 
 /*Tablet*/
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 770px) and (max-width: 1199px) {
   .lgpd-consent-popup {
     width: 100%;
     height: 200px;
@@ -148,20 +172,24 @@ document.addEventListener("DOMContentLoaded", function (e) {
       padding-left: 5px;
       margin-top: 30px;
     }
-  }
-
-  .lgpd-consent-popup-button {
+  }  
+  .lgpd-consent-popup-body {
+    display: block;
+}
+}
+.lgpd-consent-popup-button {
     font-size: 14px;
     padding: 14px 0 14px 0;
-    margin: -20px auto 10px auto;
-  }
-}
+    max-width: 300px;
+    margin: 20px 30%;
+
+    }
 
 /*Notebook*/
 @media (min-width: 1200px) and (max-width: 1700px) {
   .lgpd-consent-popup {
-    padding-left: 173px;
-    padding-right: 173px;
+    padding-left: 160px;
+    padding-right: 160px;
   }
 }
 

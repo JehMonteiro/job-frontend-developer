@@ -4,7 +4,7 @@
   <Banner />
   <Newsletter />
   <FormasPagamento />
-  <LGPD />
+  <LGPD href="../assets/politica.pdf"/>
 </template>
 
 <script>
