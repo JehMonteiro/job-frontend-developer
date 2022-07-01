@@ -1,14 +1,14 @@
 <template>
-  <Feminino />
+  <FemininoComp />
 </template>
 
 <script>
-import Feminino from "../components/Feminino.vue";
+import FemininoComp from "../components/FemininoComp.vue";
 
 export default {
   name: "Feminino",
   components: {
-    Feminino,
+    FemininoComp,
   },
 };
 </script>

@@ -1,14 +1,14 @@
 <template>
-  <Eletronicos />
+  <EletronicosComp />
 </template>
 
 <script>
-import Eletronicos from "../components/Eletronicos.vue";
+import EletronicosComp from "../components/EletronicosComp.vue";
 
 export default {
   name: "Eletronicos",
   components: {
-    Eletronicos,
+    EletronicosComp,
   },
 };
 </script>

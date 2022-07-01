@@ -1,14 +1,14 @@
 <template>
-  <Acessorios />
+  <AcessoriosComp />
 </template>
 
 <script>
-import Acessorios from "../components/Acessorios.vue";
+import AcessoriosComp from "../components/AcessoriosComp.vue";
 
 export default {
   name: "Acessorios",
   components: {
-    Acessorios,
+    AcessoriosComp,
   },
 };
 </script>

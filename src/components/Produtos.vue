@@ -5,8 +5,10 @@
       <ul>
         <li v-for="product in array_products" :key="product.id">
           <img :src="product.image" alt="" />
-          {{ product.title }} <br /><br />
-          {{ product.price }}
+          {{ product.title }} <br />
+          <p>R$ {{ product.price }}</p>
+          <br />
+          <botton><a href="/Carrinho">Adicionar ao carrinho</a></botton>
         </li>
       </ul>
     </div>
@@ -23,6 +25,7 @@ export default {
       array_products: [],
     };
   },
+
   methods: {
     async loadProducts() {
       axios
@@ -97,5 +100,13 @@ export default {
     transform: scale(1);
     background-position: 800px;
   }
+  botton {
+    padding: 5px;
+    background-color: #959da17e;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+  }
 }
+
 </style>

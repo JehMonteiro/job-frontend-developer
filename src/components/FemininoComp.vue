@@ -1,12 +1,14 @@
 <template>
   <section id="container">
-    <h1>ELETRÔNICOS</h1>
+    <h1>FEMININO</h1>
     <div class="shopping">
       <ul>
-        <li v-for="product in array_products" :key="product.id">
+         <li v-for="product in array_products" :key="product.id">
           <img :src="product.image" alt="" />
-          {{ product.title }} <br>
-          {{ product.price }}
+          {{ product.title }} <br />
+          <p>R$ {{ product.price }}</p>
+          <br />
+          <botton><a href="/Carrinho">Adicionar ao carrinho</a></botton>
         </li>
       </ul>
     </div>
@@ -17,7 +19,7 @@
 import axios from "axios";
 
 export default {
-  name: "Eletronicos",
+  name: "FemininoComp",
   data() {
     return {
       array_products: [],
@@ -26,7 +28,7 @@ export default {
   methods: {
     async loadProducts() {
       axios
-        .get("https://fakestoreapi.com/products/category/eletronics")
+        .get("https://fakestoreapi.com/products/category/women's%20clothing")
         .then((response) => {
           this.array_products = response.data;
           console.log(this.array_products);
@@ -97,5 +99,13 @@ export default {
     transform: scale(1);
     background-position: 800px;
   }
+  botton {
+    padding: 5px;
+    background-color: #959da17e;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+  }
 }
 </style>
+

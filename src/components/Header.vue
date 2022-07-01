@@ -1,8 +1,10 @@
 <template>
   <header id="nav">
     <router-link to="/">
-      <img :src="logo" :alt="alt" id="logo" />
+      <img class="logo" :src="logo" :alt="alt" />
     </router-link>
+
+    <button class="menu">&#9776;</button>
 
     <div class="input-pesquisa">
       <input type="text" placeholder="O que está procurando?" />
@@ -12,10 +14,6 @@
     <div class="carrinho">
       <a href="/Carrinho">
         <img src="img/carrinho-compras.png" alt="Carrinho de compras" />
-        <p>
-          3 itens<br />
-          R$1.000,00
-        </p>
       </a>
     </div>
   </header>
@@ -68,7 +66,9 @@ export default {
     margin-left: -140px;
   }
 }
-
+.menu{
+  display: none;
+}
 /* Links de navegação */
 .link {
   display: flex;
@@ -81,7 +81,7 @@ export default {
   li {
     list-style: none;
     font-size: 18px;
-    color: var( --color-font-text);
+    color: var(--color-font-text);
     font-weight: 700;
   }
   li:hover {
@@ -101,9 +101,9 @@ export default {
   align-items: center;
   padding: 20px 40px;
   margin-right: 100px;
-  background: var( --color-background-nav);
+  background: var(--color-background-nav);
   box-shadow: 0 8px 32px 0 rgba(100, 33, 163, 0.281);
-  border-radius: 10px;
+  border-radius: 50px;
 
   img {
     height: 40px !important;
@@ -112,11 +112,7 @@ export default {
     margin-left: auto !important;
     margin-right: auto !important;
   }
-  p {
-    text-align: center;
-    color: var(--color-gray);
-    padding-top: 10px;
-  }
+  
   &:hover {
     transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55),
       background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55),
@@ -127,6 +123,58 @@ export default {
   &:active {
     transform: scale(1);
     background-position: 800px;
+  }
+}
+
+.menu {
+  background-color: transparent;
+  border: none;
+  color: var(--color-secondary);
+  font-size: 36px;
+  position: absolute;
+  right: 15px;
+}
+
+button .menu:focus {
+    height: 250px;
+  }
+
+@media (max-width: 700px) {
+  #nav{
+    height: 100px;
+    align-items: flex-start;
+  }
+  input,
+  .input-pesquisa img {
+    display: none;
+  }
+  #nav .logo {
+    margin-left: 5px;
+    height: 80px;
+    width: 100px;
+  }
+  .carrinho {
+    padding: 10px 10px;
+    margin-right: 40px;
+    background: var(--color-background-nav);
+    box-shadow: 0 8px 32px 0 rgba(100, 33, 163, 0.281);
+    border-radius: 50px;
+  }
+
+  .link {
+    flex-direction: column;
+    align-items: unset;
+    float: right;
+    font-size: 8px;
+
+    li{
+    font-size: 13px;
+    line-height: 50px;
+     
+    }
+  }
+  .menu{
+    display: flex;
   }
 }
 </style>
