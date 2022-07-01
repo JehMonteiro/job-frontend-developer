@@ -39,4 +39,11 @@ height: 450px;
 padding-top: 20px;
 }
 }
+@media screen and (max-width: 800px) {
+.pagamento {
+display: block;
+height: 450px;
+padding-top: 20px;
+}
+}
 </style>

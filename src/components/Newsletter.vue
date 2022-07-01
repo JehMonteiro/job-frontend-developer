@@ -93,4 +93,22 @@ input {
     float: right;
   }
 }
+@media screen and (max-width: 800px) {
+ 
+  form {
+    flex-wrap: wrap;
+    height: max-content;
+    display: block;
+  }
+  p {
+    margin-right: 20px;
+  }
+  input{
+    width: 300px;
+    margin-bottom: 5px;
+  }
+  .send{
+    float: right;
+  }
+}
 </style>

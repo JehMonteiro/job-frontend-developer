@@ -168,6 +168,40 @@ button .menu:focus {
     display: flex;
   }
 }
+@media (max-width: 800px) {
+  #nav{
+    height: 100px;
+  }
+  input,
+  .input-pesquisa img {
+    display: none;
+  }
+  #nav .logo {
+    margin-left: 5px;
+    height: 80px;
+    width: 100px;
+  }
+  .carrinho {
+    padding: 10px 10px;
+    margin: 20px;
+    background: var(--color-background-nav);
+    box-shadow: 0 8px 32px 0 rgba(100, 33, 163, 0.281);
+    border-radius: 50px;
+  }
+
+  .link {
+    
+    li{
+    font-size: 13px;
+    line-height: 35px;
+     
+    }
+  }
+  .menu{
+    display: flex;
+  }
+}
+
 </style>
 
 
