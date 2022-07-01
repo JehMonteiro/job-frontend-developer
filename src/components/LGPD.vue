@@ -43,7 +43,6 @@ export default {
 
 
 <style lang="scss" scoped>
-
 .lgpd-consent-popup-body {
   display: flex;
   align-items: center;
@@ -84,9 +83,9 @@ export default {
     z-index: 100;
     font-family: sans-serif !important;
     font-size: 16px;
-    text-align: left;
     line-height: 1.5;
     margin: auto;
+    color: #333;
   }
 }
 
@@ -99,7 +98,6 @@ export default {
   border-radius: 50px;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
   line-height: 14px;
   text-align: center;
   letter-spacing: 0.1em;
@@ -108,7 +106,6 @@ export default {
   max-width: 300px;
   text-transform: uppercase;
   font-family: sans-serif !important;
-  
 
   &:hover {
     background: var(--color-background-nav);
@@ -136,7 +133,7 @@ export default {
       width: 100%;
       font-weight: 400;
       line-height: 1.5;
-      padding-top: 16px;
+      padding: 20px 0;
       font-size: 12px;
     }
   }
@@ -147,8 +144,8 @@ export default {
     height: 100%;
     align-content: center;
     align-items: center;
-    font-size: 11px!important;
-    margin-left: 20%!important;
+    font-size: 11px !important;
+    margin-left: 20% !important;
   }
 
   .lgpd-consent-popup-body {
@@ -169,21 +166,19 @@ export default {
     p {
       width: 100%;
       font-weight: 400;
-      padding-left: 5px;
-      margin-top: 30px;
+      margin: 20px 15px;
+      padding: 5px;
     }
-  }  
+  }
   .lgpd-consent-popup-body {
     display: block;
-}
+  }
 }
 .lgpd-consent-popup-button {
-    font-size: 14px;
-    padding: 14px 0 14px 0;
-    max-width: 300px;
-    margin: 20px 30%;
-
-    }
+  font-size: 14px;
+  padding: 14px 0 14px 0;
+  max-width: 300px;
+}
 
 /*Notebook*/
 @media (min-width: 1200px) and (max-width: 1700px) {

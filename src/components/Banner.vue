@@ -22,9 +22,10 @@ export default {
 
   img {
   position: relative;
-  height: 65vh;
-  width: 100vw;
+  height: 65%;
+  width: 100%;
   background-size: cover;
 }
 }
+
 </style>
