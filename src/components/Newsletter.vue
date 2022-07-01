@@ -12,7 +12,7 @@
       <div class="input">
         <input class="input" type="text" name="email" placeholder="Email" />
       </div>
-      <div>
+      <div class="send">
         <a href="#"><img src="img/send.png" /></a>
       </div>
     </form>
@@ -71,59 +71,26 @@ input {
 }
 }
 
-
-@media screen and (max-width: 1199px) {
-  .newsletter-form .input-default {
-    max-width: 171px;
-  }
-  .newsletter-text span {
-    font-size: 14px;
-    line-height: 21px;
-  }
-  .newsletter-form .btn-default {
-    font-weight: 600;
-  }
- 
-}
-@media screen and (max-width: 991px) {
-  .newsletter input {
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 767px) {
-  .newsletter .container {
+@media screen and (max-width: 700px) {
+  .newsletter  {
     flex-wrap: wrap;
+    display: block;
+    padding: 15px 20px;
+    height: 250px;
   }
-  .newsletter-form {
+  form {
     flex-wrap: wrap;
     height: max-content;
+    display: block;
   }
-  .newsletter-text {
+  p {
     margin-bottom: 16px;
   }
-  .newsletter-form .input-default,
-  .newsletter-form .btn-default {
-    max-width: 100%;
+  input{
+    width: 300px;
   }
-  .newsletter-form .btn-default {
-    padding: 16px 28px;
-  }
-  .newsletter input {
-    margin-left: -5px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .newsletter form {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .newsletter form > div {
-    flex: 1;
-    width: 100%;
-  }
-  .newsletter form .col-2 {
-    display: flex;
-    justify-content: flex-end;
+  .send{
+    float: right;
   }
 }
 </style>

@@ -31,4 +31,12 @@
   line-height: 70px;
   text-shadow: 2px 3px rgba(0, 0, 0, 0.507);
 }
+
+@media screen and (max-width: 700px) {
+.pagamento {
+display: block;
+height: 450px;
+padding-top: 20px;
+}
+}
 </style>

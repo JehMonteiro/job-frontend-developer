@@ -154,4 +154,39 @@ export default {
   position: fixed;
   z-index: 99999;
 }
+
+@media screen and (max-width: 700px) {
+
+#footer {
+  display: block;
+  height: 500px;
+
+  img{
+    width: 100px;
+    margin-top: 10px;
+}
+}
+
+.menu {
+  
+  li {
+    
+    list-style: none;
+    font-size: 10px;
+  }
+  li:hover {
+    color: var(--color-secondary);
+    transition-duration: 0.3s;
+  }
+  p {
+    margin: 12px 0px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+.redes-sociais{
+  padding: 30px;
+}
+}
 </style>

@@ -4,8 +4,6 @@
       <img class="logo" :src="logo" :alt="alt" />
     </router-link>
 
-    <button class="menu">&#9776;</button>
-
     <div class="input-pesquisa">
       <input type="text" placeholder="O que está procurando?" />
       <img src="img/lupa.png" alt="Lupa de pesquisa" />
@@ -142,7 +140,6 @@ button .menu:focus {
 @media (max-width: 700px) {
   #nav{
     height: 100px;
-    align-items: flex-start;
   }
   input,
   .input-pesquisa img {
@@ -155,21 +152,17 @@ button .menu:focus {
   }
   .carrinho {
     padding: 10px 10px;
-    margin-right: 40px;
+    margin: 20px;
     background: var(--color-background-nav);
     box-shadow: 0 8px 32px 0 rgba(100, 33, 163, 0.281);
     border-radius: 50px;
   }
 
   .link {
-    flex-direction: column;
-    align-items: unset;
-    float: right;
-    font-size: 8px;
-
+    
     li{
     font-size: 13px;
-    line-height: 50px;
+    line-height: 35px;
      
     }
   }

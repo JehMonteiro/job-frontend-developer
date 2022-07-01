@@ -106,4 +106,9 @@ export default {
     margin-top: 10px;
   }
 }
+@media screen and (max-width: 700px) {
+  #container h1{
+    font-size: 17px;
+  }
+}
 </style>
