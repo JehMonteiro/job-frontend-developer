@@ -59,14 +59,12 @@ export default {
     border: 2px solid var(--color-primary);
   }
   .input-pesquisa img {
-    width: 60px;
-    height: 70px;
+    width: 30px;
+    height: 40px;
     margin-left: -140px;
   }
 }
-.menu{
-  display: none;
-}
+
 /* Links de navegação */
 .link {
   display: flex;
