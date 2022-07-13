@@ -65,9 +65,10 @@ export default {
   width: 100%;
 
   img {
-    width: 220px;
+    
     margin-top: 20px;
   }
+  
 }
 
 .menu {

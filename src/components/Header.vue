@@ -63,6 +63,10 @@ export default {
     height: 40px;
     margin-left: -140px;
   }
+  .logo {
+    height: 100px;
+    width:110px;
+  }
 }
 
 /* Links de navegação */
@@ -145,8 +149,8 @@ button .menu:focus {
   }
   #nav .logo {
     margin-left: 5px;
-    height: 80px;
-    width: 100px;
+    height: 40px;
+    width: 60px;
   }
   .carrinho {
     padding: 10px 10px;
